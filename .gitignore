@@ -1,0 +1,8 @@
+go.mod
+simplebank/db/query/account.sql
+simplebank/db/migration/000001_init_mg.down.sql
+simplebank/db/migration/000001_init_mg.up.sql
+simplebank/db/migrations/000001_init.down.sql
+simplebank/db/migrations/000001_init.up.sql
+simplebank/db/migrations/000002_init.down.sql
+simplebank/db/migrations/000002_init.up.sql
