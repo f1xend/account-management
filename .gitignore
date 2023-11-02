@@ -6,3 +6,5 @@ simplebank/db/migrations/000001_init.down.sql
 simplebank/db/migrations/000001_init.up.sql
 simplebank/db/migrations/000002_init.down.sql
 simplebank/db/migrations/000002_init.up.sql
+mySSH
+mySSH.pub
