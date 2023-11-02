@@ -21,4 +21,4 @@ jobs:
 
     - name: Test
       working-directory: ./
-      run: make testWorkflow
+      run: make testWorkflow -f ../../makefile
