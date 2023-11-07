@@ -12,6 +12,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
 
+    env:
+      working-directory: ./
+
     services:
       postgres:
         image: postgres:12
@@ -34,6 +37,11 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.21.1'
+
+    - name: check working directory
+      working-directory: ${{ env.working-directory }}
+      run: | 
+        ls -R
 
     - name: Install golang-migrate
       run: |
