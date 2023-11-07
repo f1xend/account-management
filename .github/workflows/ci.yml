@@ -52,5 +52,13 @@ jobs:
     - name: Run migrations
       run: make migrateup
   
-    - name: Test
-      run: make test
+    - name: Test without working directory
+      run: | 
+        ls -R
+        make test
+
+    - name: Test 
+      working-directory: ${{ env.working-directory }}
+      run: | 
+        ls -R
+        make test
