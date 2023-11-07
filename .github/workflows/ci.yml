@@ -44,14 +44,16 @@ jobs:
         ls -R
 
     - name: Install golang-migrate
+      working-directory: ${{ env.working-directory }}
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.16.2/migrate.darwin-amd64.tar.gz | tar xvz
         sudo mv migrate /usr/bin/migrate
         which migrate
 
     - name: Run migrations
+      working-directory: ${{ env.working-directory }}
       run: make migrateup
 
     - name: Test
-      working-directory: .
+      working-directory: ${{ env.working-directory }}
       run: go test -v cover ./...
