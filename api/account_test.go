@@ -108,7 +108,6 @@ func TestCreateAccountAPI(t *testing.T) {
 	account := randomAccount()
 	test_acc := db.CreateAccountParams{
 		Owner:    account.Owner,
-		Balance:  0,
 		Currency: account.Currency,
 	}
 
@@ -122,7 +121,6 @@ func TestCreateAccountAPI(t *testing.T) {
 			name: "create OK",
 			account: db.CreateAccountParams{
 				Owner:    account.Owner,
-				Balance:  account.Balance,
 				Currency: account.Currency,
 			},
 			buildStubs: func(store *mockdb.MockStore) {
