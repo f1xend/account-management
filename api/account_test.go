@@ -457,8 +457,8 @@ func randomAccount() db.Account {
 
 func randomPage() settings {
 	return settings{
-		PageID:   int32(util.RandomInt(2, 3)),
-		PageSize: int32(util.RandomInt(2, 9)),
+		PageID:   int32(util.RandomInt(1, 10)),
+		PageSize: int32(util.RandomInt(5, 10)),
 	}
 }
 
